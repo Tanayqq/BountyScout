@@ -35,7 +35,7 @@ jobs:
           
           # Optional: Configure Discord notification secrets
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        run: python scout_bounties.py
+        run: python scout_bounties.py --source issues
 
       - name: Commit & Push Updated Seen Bounties State
         run: |
